@@ -1,0 +1,1 @@
+python3 venv/src/main.py
