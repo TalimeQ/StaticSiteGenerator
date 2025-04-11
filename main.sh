@@ -1,1 +1,1 @@
-python3 venv/src/main.py
+python3 src/main.py
