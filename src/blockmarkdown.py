@@ -145,3 +145,14 @@ def quote_to_html_node(block):
     text = " ".join(new_lines)
     children = text_to_children(text)   
     return ParentNode("blockquote",children)
+
+
+def extract_title(md):
+    lines = md.split("\n")
+    for line in lines:
+        if line.startswith("# "):
+            return line[2:]
+    raise ValueError("no title found")
+
+def generate_page(from_path, template_path, dest_path):
+    print(f"\"Generating page from {from_path} to {dest_path} using {template_path}\"")
