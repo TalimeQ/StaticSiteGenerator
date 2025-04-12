@@ -15,9 +15,9 @@ def main():
         shutil.rmtree(dir_path_public)
 
     copy_files_recursive("static","public")
-    generate_page(
-        os.path.join(dir_path_content, "index.md"),
+    generate_pages_recursive(
+        dir_path_content,
         template_path,
-        os.path.join(dir_path_public, "index.html"),
+        dir_path_public
     )
 main()
